@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AutoChiTesting
 {
-    public static class ExtensionMethods
+    internal static class MathHelper
     {
-        public static double[] Flatten(this double[,,] array)
+        public static double RadiansToDegrees(double radians)
         {
-            return array.Cast<double>().ToArray();
+            return radians * (180.0f / (double)Math.PI);
         }
     }
 }
